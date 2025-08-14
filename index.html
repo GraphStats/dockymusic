@@ -514,7 +514,6 @@
     let currentVideoId = '';
     let currentVideoIndex = 0;
     let searchResults = [];
-    const BASE_PATH = '/dockymusic';
 
     // Theme toggle
     toggleTheme.addEventListener('click', () => {
@@ -624,13 +623,13 @@
     // URL management
     function updateUrl(videoId) {
       if (history.pushState) {
-        history.pushState(null, '', `${BASE_PATH}/${videoId}`);
+        history.pushState(null, '', `${videoId}`);
       }
     }
 
     function replaceUrl(videoId) {
       if (history.replaceState) {
-        history.replaceState(null, '', `${BASE_PATH}/${videoId}`);
+        history.replaceState(null, '', `${videoId}`);
       }
     }
 
